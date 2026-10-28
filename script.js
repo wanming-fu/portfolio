@@ -1,0 +1,1 @@
+function switchTab(tabId, tabContent) {}

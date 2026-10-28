@@ -10,32 +10,85 @@
   </head>
   <body>
     <header>
-      <div>
-        <div id="logo">wanming fu</div>
-        <ul id="nav-bar">
-          <li class="nav-list" id="nav-list-first">paintings & physical art</li>
-          <li class="nav-list">sound</li>
-          <li class="nav-list">unity</li>
-          <li class="nav-list" id="nav-list-last">touchdesigner</li>
-        </ul>
-      </div>
+      <div id="logo">wanming fu</div>
+      <ul id="nav-bar">
+        <li>
+          <a
+            href="javascript:switchTab('tab1', 'content1');"
+            class="rounded-tab nav-tab-active"
+            id="nav1"
+            >unity</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:switchTab('tab2', 'content2');"
+            class="rounded-tab nav-tab"
+            id="nav2"
+            >sound</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:switchTab('tab3', 'content3');"
+            class="rounded-tab nav-tab"
+            id="nav3"
+            >touchdesigner</a
+          >
+        </li>
+        <li>
+          <a
+            href="javascript:switchTab('tab4', 'content4');"
+            class="rounded-tab nav-tab"
+            id="nav4"
+            >paintings & physical art</a
+          >
+        </li>
+      </ul>
     </header>
-    <div class="main-pages" id="paint-page">
-      <div class="grid-row">
-        <img src="assets/collage.jpg" alt="painting 1" class="paintings" />
-        <img src="assets/bjork-pen.jpg" alt="painting 5" class="paintings" />
-      </div>
-      <div class="grid-row">
-        <img src="assets/water-bottle.png" alt="painting 2" class="paintings" />
-        <img src="assets/oil-pastel.jpg" alt="painting 6" class="paintings" />
-      </div>
-      <div class="grid-row">
-        <img src="assets/studio-art.jpg" alt="painting 7" class="paintings" />
-        <img src="assets/my-room.jpg" alt="painting 3" class="paintings" />
-      </div>
-      <div class="grid-row">
-        <img src="assets/recent.jpg" alt="painting 4" class="paintings" />
-        <img src="assets/tree.jpg" alt="painting 8" class="paintings" />
+    <div class="main-pages" id="nav4-page">
+      <div class="main-container">
+        <p><ul class="paint-description"><li>a collection of sketches & finished pieces</li></ul></p>
+        <div class="grid-container">
+          <div class="grid-row">
+            <img src="assets/collage.jpg" alt="Plant Pot - Collage (2019)" class="paintings" />
+            <img src="assets/misty.jpg" alt="Rest in Peace, Misty - Coloured Pencil (2026)" class="paintings" />
+          </div>
+          <div class="grid-row">
+            <img
+              src="assets/water-bottle.png"
+              alt="Water Bottle - Coloured Pencil (2023)"
+              class="paintings"
+            />
+            <img
+              src="assets/bjork-paint.jpg"
+              alt="Bjork - Painting (2024)"
+              class="paintings"
+            />
+            <img
+              src="assets/oil-pastel.jpg"
+              alt="Flower Vase Sketch - Oil Pastel (2025)"
+              class="paintings"
+            />
+          </div>
+          <div class="grid-row">
+            <img
+              src="assets/studio-art.jpg"
+              alt="Content Face - Acrylic Painting (VCE Studio Arts Final 2022)"
+              class="paintings"
+            />
+            <img src="assets/my-room.jpg" alt="My Room - Coloured Pencil (2023)" class="paintings" />
+          </div>
+          <div class="grid-row">
+            <img src="assets/recent.jpg" alt="Untitled - Coloured Pencil & Acrylic (2026)" class="paintings" />
+            <img src="assets/tree.jpg" alt="Tree - Coloured Pencil Sketch (2025)" class="paintings" />
+            <img
+              src="assets/bjork-pen.jpg"
+              alt="Bjork - Pen Sketch (2024)"
+              class="paintings"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </body>

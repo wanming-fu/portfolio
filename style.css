@@ -10,6 +10,10 @@ header {
   justify-content: space-between;
 }
 
+p {
+  padding-bottom: 20px;
+}
+
 #logo {
   font-size: 1.75rem;
   font-weight: bold;
@@ -50,13 +54,31 @@ header {
 }
 
 .main-pages {
-  background-color: rgb(255, 227, 232);
   flex-grow: 1;
 }
 
+#nav4-page {
+  background-color: rgb(255, 227, 232);
+}
+
+#nav3-page {
+  background-color: rgb(201, 236, 226);
+}
+
+#nav2-page {
+  background-color: rgb(255, 224, 212);
+}
+
+#nav1-page {
+  background-color: rgb(206, 236, 250);
+}
+
 .main-container {
-  display: grid;
   padding: 50px;
+}
+
+.grid-container {
+  display: grid;
   grid-template-columns: 5fr 4fr 6fr 4fr;
 }
 
@@ -81,22 +103,26 @@ header {
   flex-wrap: nowrap;
 }
 
-#nav1 {
+#nav4 {
   background-color: rgb(255, 227, 232);
-  color: rgb(109, 2, 37);
-}
-
-#nav2 {
-  background-color: rgb(201, 236, 226);
-  color: rgb(1, 75, 50);
+  color: rgb(109, 2, 2);
 }
 
 #nav3 {
+  background-color: rgb(201, 236, 226);
+  color: rgb(1, 70, 75);
+}
+
+#nav2 {
   background-color: rgb(255, 224, 212);
   color: rgb(109, 2, 2);
 }
 
-#nav4 {
+#nav1 {
   background-color: rgb(206, 236, 250);
   color: rgb(1, 70, 75);
+}
+
+.paint-description {
+  padding-left: 20px;
 }
