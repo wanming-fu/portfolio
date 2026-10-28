@@ -57,22 +57,6 @@ p {
   flex-grow: 1;
 }
 
-#nav4-page {
-  background-color: rgb(255, 227, 232);
-}
-
-#nav3-page {
-  background-color: rgb(201, 236, 226);
-}
-
-#nav2-page {
-  background-color: rgb(255, 224, 212);
-}
-
-#nav1-page {
-  background-color: rgb(206, 236, 250);
-}
-
 .main-container {
   padding: 50px;
 }
@@ -103,26 +87,49 @@ p {
   flex-wrap: nowrap;
 }
 
+/* tab styles */
 #nav4 {
-  background-color: rgb(255, 227, 232);
   color: rgb(109, 2, 2);
 }
 
 #nav3 {
-  background-color: rgb(201, 236, 226);
   color: rgb(1, 70, 75);
 }
 
 #nav2 {
-  background-color: rgb(255, 224, 212);
   color: rgb(109, 2, 2);
 }
 
 #nav1 {
-  background-color: rgb(206, 236, 250);
   color: rgb(1, 70, 75);
+}
+
+/* tab and page styles */
+
+.nav4 {
+  background-color: rgb(255, 227, 232);
+}
+
+.nav3 {
+  background-color: rgb(201, 236, 226);
+}
+
+.nav2 {
+  background-color: rgb(255, 224, 212);
+}
+
+.nav1 {
+  background-color: rgb(206, 236, 250);
 }
 
 .paint-description {
   padding-left: 20px;
+}
+
+.main-pages {
+  display: none;
+}
+
+#page1 {
+  display: block;
 }
