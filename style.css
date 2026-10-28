@@ -1,33 +1,38 @@
 body {
   background-color: white;
   color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
 #logo {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
   padding: 20px;
 }
 
 #nav-bar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: right;
   list-style-type: none;
-  background-color: pink;
+  /* background-color: rgb(255, 227, 232); */
   padding: 0px;
+  padding-top: 20px;
   margin: 0px;
+  flex-wrap: nowrap;
 }
 
-.nav-list {
+/* .nav-list {
   padding: 10px 20px 10px 20px;
   margin: 10px 0px 10px 0px;
   display: flex;
   border-right: 1px solid rgb(155, 51, 86);
   border-left: 1px solid rgb(155, 51, 86);
-  justify-content: center;
-  color: rgb(109, 2, 37);
-  font-weight: bold;
-  font-size: 1.2rem;
 }
 
 #nav-list-first {
@@ -36,4 +41,62 @@ body {
 
 #nav-list-last {
   border-right: none;
+}
+  */
+
+.paintings {
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+.main-pages {
+  background-color: rgb(255, 227, 232);
+  flex-grow: 1;
+}
+
+.main-container {
+  display: grid;
+  padding: 50px;
+  grid-template-columns: 5fr 4fr 6fr 4fr;
+}
+
+.rounded-tab {
+  display: flex;
+  justify-content: center;
+  color: rgb(109, 2, 37);
+  font-weight: bold;
+  font-size: 1.2rem;
+  --r: 25px; /* control the radius */
+  line-height: 1.8; /* control the height */
+  padding-inline: 0.5em;
+  border-inline: var(--r) solid #0000;
+  border-radius: calc(2 * var(--r)) calc(2 * var(--r)) 0 0 / var(--r);
+  mask:
+    radial-gradient(var(--r) at var(--r) 0, #0000 98%, #000 101%)
+      calc(-1 * var(--r)) 100%/100% var(--r) repeat-x,
+    conic-gradient(#000 0 0) padding-box;
+  background: rgb(255, 227, 232) border-box; /* border-box is needed for a gradient coloration */
+  width: fit-content;
+  padding: 10px 25px 10px 25px;
+  flex-wrap: nowrap;
+}
+
+#nav1 {
+  background-color: rgb(255, 227, 232);
+  color: rgb(109, 2, 37);
+}
+
+#nav2 {
+  background-color: rgb(201, 236, 226);
+  color: rgb(1, 75, 50);
+}
+
+#nav3 {
+  background-color: rgb(255, 224, 212);
+  color: rgb(109, 2, 2);
+}
+
+#nav4 {
+  background-color: rgb(206, 236, 250);
+  color: rgb(1, 70, 75);
 }
