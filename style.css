@@ -1,20 +1,92 @@
+:root {
+  /* Font Families */
+  --font-serif: "redaction", sans-serif;
+  --font-mono: "Google Sans Code", monospace;
+  --font-mono-features: "MONO" 1;
+
+  /* implementation
+
+  .editor-panel {
+  font-family: var(--font-code);
+  font-variation-settings: var(--font-code-features);
+  font-weight: 400; 
+  font-optical-sizing: auto;
+}
+
+.inline-code-snippet {
+  font-family: var(--font-code);
+  font-variation-settings: var(--font-code-features);
+  font-weight: 700;
+  color: #e74c3c;
+}*/
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-bold: 700;
+}
+
+html {
+  /* Reserves scrollbar space permanently so layout never shifts */
+  scrollbar-gutter: stable;
+}
+
 body {
+  width: 100vw; /* Forces body to full window width */
+  overflow-x: hidden; /* Prevents horizontal scrolling caused by the 100vw */
+  overflow-y: overlay;
   background-color: white;
   color: black;
   display: flex;
   flex-direction: column;
+  font-family: var(--font-mono);
+  font-variation-settings: var(--font-mono-features);
+  font-weight: 400;
+  font-optical-sizing: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: transparent; /* Makes the track completely invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(
+    1,
+    70,
+    75,
+    0.3
+  ); /* Matches your theme color, slightly transparent */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(1, 70, 75, 0.6); /* Darkens when hovered */
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  padding: 0vh 5vw 0vh 5vw;
+  /* font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: normal; */
 }
 
 p {
   padding-bottom: 20px;
 }
 
+hr {
+  border: 2px dashed rgba(1, 70, 75, 0.4);
+  height: 0px;
+  background-color: rgba(109, 2, 37, 0);
+  margin: 50px 0;
+}
+
 #logo {
+  font-family: var(--font-serif);
+  font-style: normal;
   font-size: 1.75rem;
   font-weight: bold;
   padding: 20px;
@@ -59,11 +131,20 @@ p {
 
 .main-container {
   padding: 50px;
+  width: 70vw;
+  max-width: 2000px;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 5fr 4fr 6fr 4fr;
+}
+.grid-row-last {
+  padding-right: 0px;
+}
+
+.unity-main-container {
+  max-width: 1000px;
 }
 
 .rounded-tab {
@@ -71,9 +152,9 @@ p {
   justify-content: center;
   color: rgb(109, 2, 37);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   --r: 25px; /* control the radius */
-  line-height: 1.8; /* control the height */
+  line-height: 2; /* control the height */
   padding-inline: 0.5em;
   border-inline: var(--r) solid #0000;
   border-radius: calc(2 * var(--r)) calc(2 * var(--r)) 0 0 / var(--r);
@@ -128,8 +209,150 @@ p {
 
 .main-pages {
   display: none;
+  justify-content: center;
 }
 
-#page1 {
+#unity-page {
+  display: flex;
+  justify-content: center;
+}
+
+.unity-project-sections {
+  text-align: left;
+  display: block;
+  width: 100%;
+  /* max-width: 1000px;*/
+}
+
+.unity-showcase {
+  /* iframe */
+  width: 40%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  min-width: 300px;
+}
+
+summary {
+  padding-bottom: 10px;
+}
+
+.unity-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+/* Overall Layout Wrapper */
+.carousel-wrapper {
+  position: relative;
+  justify-self: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  overflow: hidden; /* Clips sharp corners on images */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Modern soft shadow */
+}
+
+/* The horizontal scroll track */
+.swipe-container {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hides Firefox scrollbar */
+}
+
+.swipe-container::-webkit-scrollbar {
+  display: none; /* Hides Chrome/Safari scrollbar */
+}
+
+/* Individual Slide elements */
+.swipe-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.swipe-slide img,
+.swipe-slide iframe {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
   display: block;
 }
+
+/* Fixed Controls Layer */
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows swiping right through this layer */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Elegant, Floating Arrow Style */
+.arrow {
+  appearance: none;
+  border: 2px solid rgb(206, 236, 250);
+  cursor: pointer;
+  outline: none;
+  pointer-events: auto; /* Re-enables clicking on just the buttons */
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(1, 70, 75, 0.3);
+  color: rgb(206, 236, 250);
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 25%;
+  backdrop-filter: blur(1px); /* Modern glassmorphism blur */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: all 0.1s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(1, 70, 75, 0.7);
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.arrow:active {
+  background-color: rgb(206, 236, 250);
+}
+
+.media-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Match your image height */
+  background-color: #000; /* Dark background placeholder while iframe loads */
+}
+
+/* Force iframe to perfectly fill the slide container */
+.media-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* The Swipe Guard Layer - was supposed to be invisible layer that stops you from interacting with the vid on mobile or something
+.swipe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: red;
+  pointer-events: auto;
+}  */

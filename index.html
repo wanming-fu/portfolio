@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+   <!--fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Redaction:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>Home Page</title>
   </head>
   <body>
@@ -14,7 +18,7 @@
       <ul id="nav-bar">
         <li>
           <a
-            href="javascript:switchTab('tab1', 'page1');"
+            href="javascript:switchTab('tab1', 'unity-page');"
             class="nav1 rounded-tab nav-tab-active"
             id="nav1"
             >unity</a
@@ -38,7 +42,7 @@
         </li>
         <li>
           <a
-            href="javascript:switchTab('tab4', 'page4');"
+            href="javascript:switchTab('tab4', 'painting-page');"
             class="nav4 rounded-tab nav-tab"
             id="nav4"
             >paintings & physical art</a
@@ -46,25 +50,93 @@
         </li>
       </ul>
     </header>
-    <div class="main-pages nav1" id="page1">
-      <div class="main-container">
-        <details>
-          <summary>Plastic Surgery*</summary>
+    <div class="main-pages nav1" id="unity-page">
+      <div class="main-container unity-main-container">
+        <details open class="unity-project-sections">
+          <summary class="unity-header">Plastic Surgery*</summary>
           <p>Narrative game, 2026</p>
-          <iframe width="420" height="315"
+         <!-- <iframe class="unity-showcase"
             src="https://www.youtube.com/embed/wxl6NPf3GbI?autoplay=1&mute=1">
-          </iframe>
+          </iframe>-->
+          
+
+
+<div class="carousel-wrapper">
+  <!-- The Scrollable Image Track -->
+  <div class="swipe-container">
+    <!-- Slide 1: Standard Image -->
+    <div class="swipe-slide">
+      <img src="assets/plastic-surgery (3).png" alt="Photo 1">
+    </div>
+
+    <div class="swipe-slide">
+      <img src="assets/plastic-surgery (2).png" alt="Photo 3">
+    </div>
+
+    <!-- Slide 3: Standard Image -->
+    <div class="swipe-slide">
+      <img src="assets/plastic-surgery (1).png" alt="Photo 3">
+    </div>
+  </div>
+
+  <!-- Fixed UI Controls -->
+  <div class="carousel-controls">
+    <button class="arrow" data-dir="prev" aria-label="Previous slide">&#10094;</button>
+    <button class="arrow" data-dir="next" aria-label="Next slide">&#10095;</button>
+  </div>
+</div>
+
+
+
+
+
+
           <details>
             <summary>Description</summary>
             <p>Do you think of the takeaway box you tossed after ten minutes? What happens if treated our own bodies the same way we treat plastic? Plastic Surgery* explores the contradiction of a society that depends on a material it treats as disposable. </p>
           </details>
         </details>
-        <details>
-          <summary>A New Light</summary>
+        <hr>
+        <details open class="unity-project-sections">
+          <summary class="unity-header">A New Light</summary>
           <p>3D puzzle game, 2026</p>
-          <iframe width="420" height="315"
-            src="https://www.youtube.com/embed/IdIcakSUS6Y?autoplay=1&mute=1">
-          </iframe>
+<div class="carousel-wrapper">
+  <!-- The Scrollable Image Track -->
+  <div class="swipe-container">
+    <!-- Slide 1: Standard Image -->
+    <div class="swipe-slide">
+      <img src="assets/a-new-light-thumbnail.png" alt="Photo 1">
+    </div>
+
+    <!-- Slide 2: Interactive Iframe (e.g., YouTube video or Map) -->
+     <!-- class="unity-showcase" -->
+    <div class="swipe-slide">
+      <div class="media-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/IdIcakSUS6Y?mute=1"
+          title="Embedded Content" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+        <!-- This layer forces touch gestures to swipe the slider instead of interacting with the iframe -->
+       <!-- <div class="swipe-overlay"></div>-->
+      </div>
+    </div>
+
+    <!-- Slide 3: Standard Image -->
+    <div class="swipe-slide">
+      <img src="assets/a-new-light-3.png" alt="Photo 3">
+    </div>
+  </div>
+
+  <!-- Fixed UI Controls -->
+  <div class="carousel-controls">
+    <button class="arrow" data-dir="prev" aria-label="Previous slide">&#10094;</button>
+    <button class="arrow" data-dir="next" aria-label="Next slide">&#10095;</button>
+  </div>
+</div>
+
+          
           <details>
             <summary>Description</summary>
             <p>You've just moved in, but something about the house seems a little off...</p>
@@ -72,12 +144,45 @@
 <p>A New Light is a 3D puzzle game centred around light and reflection, where players push and jump over objects to escape a house that has turned against them.  Developed in the Immersive Environments studio, the game combines early prototypes exploring different "forces": Sue-jee's reflections and Wanming's entrapping objects.</p>
           </details>
         </details>
-        <details>
-          <summary>Machivium</summary>
+        <hr>
+        <details open class="unity-project-sections">
+          <summary class="unity-header">Machivium</summary>
           <p>Unity environment, 2025</p>
-          <iframe width="420" height="315"
-            src="https://www.youtube.com/embed/nbgqtG7FZ94?autoplay=1&mute=1">
-          </iframe>
+
+
+<div class="carousel-wrapper">
+  <!-- The Scrollable Image Track -->
+  <div class="swipe-container">
+
+
+    <!-- Slide 2: Interactive Iframe (e.g., YouTube video or Map) -->
+     <!-- class="unity-showcase" -->
+    <div class="swipe-slide">
+      <div class="media-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/nbgqtG7FZ94?mute=1"
+          title="Embedded Content" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+        <!-- This layer forces touch gestures to swipe the slider instead of interacting with the iframe -->
+       <!-- <div class="swipe-overlay"></div>-->
+      </div>
+    </div>
+
+    <!-- Slide 3: Standard Image
+    <div class="swipe-slide">
+      <img src="assets/a-new-light-3.png" alt="Photo 3">
+    </div> -->
+  </div>
+
+  <!-- Fixed UI Controls 
+  <div class="carousel-controls">
+    <button class="arrow" data-dir="prev" aria-label="Previous slide">&#10094;</button>
+    <button class="arrow" data-dir="next" aria-label="Next slide">&#10095;</button>
+  </div> -->
+</div>
+
           <details>
             <summary>Description</summary>
             <p>Machivium is an imagining of an alternate future branching from the 90s, where scientists discovered how to create intelligent artificial sentience. 
@@ -86,15 +191,46 @@ With an emotional range similar to humans but vastly different motivations and a
 Now they have learned how to feel for others. Lingering wisps of past emotions call to them, human and non-human.</p>
           </details>
         </details>
-        <details>
-          <summary>actually, my favourite colour IS pink</summary>
+        <hr>
+        <details open class="unity-project-sections">
+          <summary class="unity-header">actually, my favourite colour IS pink</summary>
           <p>Unity environment, 2024</p>
-          <iframe width="420" height="315"
-            src="https://www.youtube.com/embed/wxl6NPf3GbI?autoplay=1&mute=1">
-          </iframe>
+
+<div class="carousel-wrapper">
+  <!-- The Scrollable Image Track -->
+  <div class="swipe-container">
+
+
+    <!-- Slide 2: Interactive Iframe (e.g., YouTube video or Map) -->
+     <!-- class="unity-showcase" -->
+    <div class="swipe-slide">
+      <div class="media-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/wxl6NPf3GbI?mute=1"
+          title="Embedded Content" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+        <!-- This layer forces touch gestures to swipe the slider instead of interacting with the iframe -->
+       <!-- <div class="swipe-overlay"></div>-->
+      </div>
+    </div>
+
+    <!-- Slide 3: Standard Image
+    <div class="swipe-slide">
+      <img src="assets/a-new-light-3.png" alt="Photo 3">
+    </div>-->
+  </div>
+
+  <!-- Fixed UI Controls
+  <div class="carousel-controls">
+    <button class="arrow" data-dir="prev" aria-label="Previous slide">&#10094;</button>
+    <button class="arrow" data-dir="next" aria-label="Next slide">&#10095;</button>
+  </div> -->
+</div>
           <details>
             <summary>Description</summary>
-            <p>A 3D environment exploring my relationship to internalised misogyny growing up</p>
+            <p>‘actually, my favourite colour IS pink’ showcases the role of internalised misogyny in my childhood and teenage years.</p>
           </details>
         </details>
       </div>
@@ -115,7 +251,7 @@ Now they have learned how to feel for others. Lingering wisps of past emotions c
       </div>
 
 
-    <div class="main-pages nav4" id="page4">
+    <div class="main-pages nav4" id="painting-page">
       <div class="main-container">
         <p><ul class="paint-description"><li>a collection of sketches & finished pieces</li></ul></p>
         <div class="grid-container">
@@ -148,7 +284,7 @@ Now they have learned how to feel for others. Lingering wisps of past emotions c
             />
             <img src="assets/my-room.jpg" alt="My Room - Coloured Pencil (2023)" class="paintings" />
           </div>
-          <div class="grid-row">
+          <div class="grid-row-last">
             <img src="assets/recent.jpg" alt="Untitled - Coloured Pencil & Acrylic (2026)" class="paintings" />
             <img src="assets/tree.jpg" alt="Tree - Coloured Pencil Sketch (2025)" class="paintings" />
             <img
